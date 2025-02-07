@@ -44,13 +44,8 @@ CREATE TABLE book_entries (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
-### 4. Configuration
-`npm start`
-The server will run on http://localhost:3000
 
 ### Testing
-nodemon .\index.js
-
 Insert Sample Data
 ```
 INSERT INTO book_entries (
@@ -65,9 +60,11 @@ INSERT INTO book_entries (
     'Everything is negotiable. Challenge authority.'
 );
 ```
+Run the project
+`nodemon .\index.js`
 
 ### Project Structure
-.
+```
 ├── public/          
     └── main.css
 ├── views/           
@@ -79,7 +76,7 @@ INSERT INTO book_entries (
 ├── index.js         
 ├── package.json
 └── package-lock.json    
-
+```
 
 ### Contributing
 Fork the repository
