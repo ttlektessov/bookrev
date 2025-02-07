@@ -5,7 +5,7 @@ Personal Book Review Platform
 
 A personal book review website that tracks reading history, ratings, and favorite quotes. Integrates with Open Library for book covers and uses PostgreSQL for data storage.
 
-![Screenshot](https://via.placeholder.com/800x400.png?text=Book+Review+Screenshot)
+![Screenshot](/public/screenshot.png)
 
 ## Features
 - Book catalog with covers
