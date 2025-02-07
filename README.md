@@ -58,8 +58,10 @@ INSERT INTO book_entries (
 );
 ```
 ----
+
 ### Run the project
 `nodemon .\index.js`
+
 ----
 ### Project Structure
 ```
