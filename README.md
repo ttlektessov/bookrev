@@ -1,12 +1,9 @@
 # bookrev
-Personal Book Review Platform
-
-# Book Review Platform
 
 A personal book review website that tracks reading history, ratings, and favorite quotes. Integrates with Open Library for book covers and uses PostgreSQL for data storage.
 
 ![Screenshot](/public/screenshot.png)
-
+----
 ## Features
 - Book catalog with covers
 - Rating system (1-10)
@@ -14,12 +11,12 @@ A personal book review website that tracks reading history, ratings, and favorit
 - Detailed review pages
 - Sort by rating/date
 - Previous/Next book navigation
-
+----
 ## Prerequisites
 - Node.js (v18+)
 - npm (v9+)
 - PostgreSQL (v15+)
-
+----
 ## Installation
 
 ### 1. Clone Repository
@@ -44,7 +41,7 @@ CREATE TABLE book_entries (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
-
+----
 ### Testing
 Insert Sample Data
 ```
@@ -62,7 +59,7 @@ INSERT INTO book_entries (
 ```
 Run the project
 `nodemon .\index.js`
-
+----
 ### Project Structure
 ```
 ├── public/          
