@@ -77,14 +77,3 @@ Run the project
 ├── package.json
 └── package-lock.json    
 ```
-
-### Contributing
-Fork the repository
-
-Create feature branch (git checkout -b feature/foo)
-
-Commit changes (git commit -am 'Add foo')
-
-Push to branch (git push origin feature/foo)
-
-Create new Pull Request
