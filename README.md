@@ -57,7 +57,8 @@ INSERT INTO book_entries (
     'Everything is negotiable. Challenge authority.'
 );
 ```
-Run the project
+----
+### Run the project
 `nodemon .\index.js`
 ----
 ### Project Structure
