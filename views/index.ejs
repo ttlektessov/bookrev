@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs") %>
+
+<div class="sort-options">
+  Sort by: 
+  <a href="/?sort=title_asc" class="<%= currentSort === 'title_asc' ? 'active' : '' %>">Title (A-Z)</a> | 
+  <a href="/?sort=date_desc" class="<%= currentSort === 'date_desc' ? 'active' : '' %>">Date (New-Old)</a> | 
+  <a href="/?sort=rating_desc" class="<%= currentSort === 'rating_desc' ? 'active' : '' %>">Rating (Best-Worst)</a>
+</div>
+<hr>
+<% reviews.forEach(review => { %>
+  <div class="book-container">
+    <a href="/book/<%= review.id %>">
+        <img 
+            src="https://covers.openlibrary.org/b/isbn/<%= review.isbn %>-L.jpg" 
+            alt="<%= review.title %> cover" 
+            class="book-cover"
+            onerror="this.src='https://via.placeholder.com/150x200?text=No+Cover'"
+        >
+    </a>
+    <div class="book-details">
+      <a href="/book/<%= review.id %>" class="book-title"><%= review.title %></a>
+        <div class="book-author"><%= review.author %></div>
+        <div class="book-author">ISBN: <%= review.isbn %></div>
+        <div class="book-rating">Rating: <%= review.rating %>/10</div>
+        <% if (review.fav_quote) { %>
+            <div class="book-quote">"<%= review.fav_quote %>"</div>
+        <% } %>
+        <div class="book-review-text"><%= review.review %></div>
+        <div class="book-date">Date Read: <%= review.date_read.toDateString() %></div>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+<% }) %>
+
+<%- include("partials/footer.ejs") %>

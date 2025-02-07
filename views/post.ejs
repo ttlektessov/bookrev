@@ -1,0 +1,42 @@
+<%- include("partials/header.ejs") %>
+
+<div class="book-container">
+  <img 
+      src="https://covers.openlibrary.org/b/isbn/<%= review.isbn %>-L.jpg" 
+      alt="<%= review.title %> cover" 
+      class="book-cover"
+      onerror="this.src='https://via.placeholder.com/150x200?text=No+Cover'"
+  >
+  <div class="book-details">
+      <div class="book-title"><%= review.title %></div>
+      <div class="book-author"><%= review.author %></div>
+      <div class="book-author">ISBN: <%= review.isbn %></div>
+      <div class="book-rating">Rating: <%= review.rating %>/10</div>
+      <% if (review.fav_quote) { %>
+          <div class="book-quote">"<%= review.fav_quote %>"</div>
+      <% } %>
+      <div class="book-review-text"><%= review.review %></div>
+      <div class="book-date">Date Read: <%= review.date_read.toDateString() %></div>
+      
+      <% if (review.notes) { %>
+          <div class="book-notes">
+              <h3>Detailed Notes</h3>
+              <%= review.notes %>
+          </div>
+      <% } %>
+  </div>
+  <div style="clear: both;"></div>
+</div>
+<div class="book-navigation">
+  <% if (prevId) { %>
+      <a href="/book/<%= prevId %>" class="nav-link">← Previous Book</a>
+  <% } %>
+  
+  <a href="/" class="nav-link">All Books</a>
+
+  <% if (nextId) { %>
+      <a href="/book/<%= nextId %>" class="nav-link">Next Book →</a>
+  <% } %>
+</div>
+
+<%- include("partials/footer.ejs") %>
